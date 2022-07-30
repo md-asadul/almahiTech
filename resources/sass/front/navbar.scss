@@ -1,0 +1,95 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.main-navbar-wrapper{
+    .brand-nav {
+        // visibility: visible;
+    }
+    .top-navbar {
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        z-index: 999;
+        padding-top: 21px;
+        // &.newBg {
+        //     background-color: #fff;
+        //     .brand-nav {
+        //         visibility: visible;
+        //     }
+        // }
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+        .brand-nav {
+            // visibility: hidden;
+            // margin-right: 71px;
+            // li:not(:last-of-type) {
+            //     margin-right: 30px;
+            // }
+            li {
+                a {
+                    // min-width: 110px;
+                    font-family: Lato;
+                    font-size: 15px;
+                    padding: 20px 16px;
+                    color: #797979;
+                    letter-spacing: .14px;
+                    transition: all .125s ease-in-out 0s;
+                    display: block;
+                    &:hover {
+                        color: #007cf5;
+                    }
+                    // img {
+                    //     max-width: 30px;
+                    //     max-height: 20px;
+                    //     margin-right: 8px;
+                    //     margin-top: -6px;
+                    // }
+                    // &:active {
+                    //     border-bottom: 2px solid #fccd03;
+                    // }
+                }
+            }
+        }
+        .user-auth {
+            .nav  {
+                display: flex;
+                align-items: center;
+                .sign-in a {
+                    background: #007cf5;
+                    box-shadow: 1px 25px 42px 0 rgb(0 118 255 / 23%);
+                    color: #fff;
+                    font-size: 14px;
+                    line-height: 1;
+                    padding: 12px 20px;
+                    border-radius: 25px;
+                    i {
+                        margin-right: 5px;
+                    }
+                    &:hover {
+                        background: #0055a9;
+                    }
+                }
+                .add-cart {
+                    font-size: 15px;
+                    color: #98a3b3;
+                    letter-spacing: .14px;
+                    padding: 20px 19px;
+                    display: inline-flex;
+                    align-items: center;
+                }
+            }
+            .navbar-right {
+                li {
+                    a {
+                        padding: 20px 19px;
+                        display: inline-flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.faqs-wrapper {
+    position: relative;
+    padding: 110px 0 0px;
+    background: linear-gradient(180deg,#eee -39.73%,hsla(0,0%,93.3%,0) 80.13%);
+    z-index: 1;
+    .faq-section {
+        background-color: #f4f4f4;
+        padding: 115px 0 210px;
+        .faqs-header {
+            text-align: center;
+            margin-bottom: 60px;
+            h2 {
+                color: #000;
+                font-size: 44px;
+                font-weight: 800;
+                line-height: 1.568em; 
+            }
+        }
+        .container {
+            .faq-content {
+                max-width: 1028px;
+                margin: 0 auto;
+                .content-area {
+                    .accordion {
+                        .accordion-item {
+                            margin-bottom: 15px;
+                            border-radius: 5px;
+                            box-shadow: 0 3px 4px rgb(0 0 0 / 5%);
+                            padding: 1px;
+                            background: #fff;
+                            overflow: hidden;
+                            background: #eff5fc;
+                            border: 1px solid #eceff1;
+                            &:active {
+                                position: relative;
+                                z-index: 1;
+                                box-shadow: 0 50px 50px rgb(0 0 0 / 8%);
+                                background: linear-gradient(90deg,#d694ff,#8baaff 54%,#00d4ff);
+                            }
+                            .accordion-header {
+                                .accordion-button.collapsed {
+                                    color: #292929;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    line-height: 1.222em;
+                                    background: #fff;
+                                    padding: 30px 30px 30px 30px;
+                                    border-radius: 5px 5px 0 0;
+                                    // &:not(.collapsed) {
+                                    //     color: #f1634c;
+                                    // }
+                                    &:focus {
+                                        box-shadow: none;
+                                    }
+                                    &::after {
+                                        background-image: url("/images/front/add-outline.svg");
+                                    }
+                                }
+                                .accordion-button {
+                                    color: #292929;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    line-height: 1.222em;
+                                    background: #fff;
+                                    padding: 30px 30px 30px 30px;
+                                    border-radius: 5px 5px 0 0;
+                                    &:not(.collapsed) {
+                                        color: #f1634c;
+                                        box-shadow: none;
+                                    }
+                                    &:focus {
+                                        box-shadow: none;
+                                    }
+                                    &::after {
+                                        background-image: url("/images/front/minus.svg");
+                                    }
+                                }
+                            }
+                            .accordion-body {
+                                padding: 0 30px 30px;
+                                background: #fff;
+                                a {
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

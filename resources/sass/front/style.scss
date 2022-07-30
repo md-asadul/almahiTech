@@ -1,0 +1,73 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+//Home page style start
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    input:-internal-autofill-selected {
+        background-color: transparent !important;
+        color: transparent;
+    }
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: all .125s ease-in-out 0s;
+    &:hover {
+        text-decoration: none;
+    }
+}
+dl,
+ol,
+ul {
+    margin-bottom: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.btn:focus {
+    box-shadow: none;
+}
+.highlight-blue{
+    color: #0068f3;
+}
+.section-title {
+    width: 76%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 27px;
+  h2 { 
+    opacity: .9;
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: .36px;
+  }
+  p{
+    font-size: 18px;
+    color: #4f5b6d;
+    font-weight: 400;                
+    letter-spacing: .16px;
+    text-align: center;
+    line-height: 30px;
+  }
+}

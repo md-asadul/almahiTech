@@ -1,0 +1,100 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.about-wrapper {
+    // padding-bottom: 150px;
+    background: #f5f7fa;
+    .banner-wrapper {
+        background-image: url(/images/front/banner-bg.svg);
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        padding-top: 154px;
+        margin-bottom: -238px;
+        height: 551px;
+        .banner-heading-title {
+            h1 {
+                font-size: 40px;
+                font-weight: 900;
+                line-height: 50px;
+                color: #000;
+                text-align: center;    
+            }
+        }
+    }
+    .who-we-are-wrapper {
+        .who-we-are {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .who-we-are-content {
+                width: 45%;
+                padding-right: 40px;
+                h2 {
+                    margin-bottom: 25px;
+                    font-size: 40px;
+                    line-height: 50px;
+                    color: #000;
+                    font-weight: 900;
+                   
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #637178;
+                    margin-bottom: 10px;
+                }
+            }
+            .who-we-are-image {
+                width: 55%;
+                img {
+                    height: auto;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .our-goal-wrapper {
+        padding: 216px 0 310px;
+        margin-top: -88px;
+        z-index: 1;
+        background-image: url(/images/front/our-goal-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        .our-goal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .our-goal-image {
+                width: 50%;
+                margin-left: -75px;
+            }
+            .our-goal-content {
+                width: 50%;
+                padding-left: 25px;
+                h3 {
+                    font-size: 23px;
+                    font-weight: 700;
+                    color: #a84bff;
+                    margin: 20px 0 10px;
+                }
+                h2{
+                    color: #000;
+                    margin: 20px 0 10px;
+                    font-size: 40px;
+                    font-weight: 900;
+                    line-height: 50px;
+                    font-weight: 900;
+                    margin-bottom: 25px;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #637178;
+                    margin-bottom: 10px;
+                    strong {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
