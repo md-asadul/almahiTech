@@ -53,66 +53,163 @@
                 }
             }
             .blog-content-search {
-                padding: 0 0 0 30px;
+                // padding: 0 0 0 30px;
                 position: absolute;
                 right: 0;
-                top: 50%;
-                transform: translateY(-50%);
+                // top: 50%;
+                // transform: translateY(-50%);
                 .search_container {
-                    position: relative;
-                    .search {
-                        background: #fff;
-                        height: 50px;
-                        width: 50px;
-                        display: flex;
-                        align-items: center;
-                        transition: all .2s;
-                        box-shadow: 0 20px 50px 0 rgb(109 122 168 / 15%);
-                        border-radius: 50px;
-                        input {
-                            width: 100%;
-                            height: 100%;
-                            font-size: 14px;
-                            background: transparent;
-                            padding-left: 25px;
-                            border: 0;
-                            color: #000;
-                            -webkit-appearance: none;
-                        }
-                        .go-btn {
-                            position: absolute;
-                            right: 0;
-                            width: 54px;
-                            height: 37px;
-                            line-height: 37px;
-                            text-align: center;
-                            font-size: 1.6rem;
-                            color: #fff;
-                            background: #1888f5;
-                            cursor: pointer;
-                            transition: all .2s;
-                            border-radius: 25px;
-                            opacity: 0;
-                            visibility: hidden;
-                        }
-                    }
-                    .search-btn {
+                    // position: relative;
+
+
+                    .searchBox{
                         position: absolute;
+                        transform: translate(-100%,-50%);
+                        top:50%;
+                        left:0;
+                      }
+                      .searchBox .inputBox{
                         height: 50px;
                         width: 50px;
                         border-radius: 50%;
+                        position: relative;
                         background: #fff;
-                        right: 0;
-                        top: 0;
-                        bottom: 0;
-                        line-height: 50px;
-                        text-align: center;
-                        cursor: pointer;
+                        transition: all 0.5s ease-in-out;
+                        overflow: hidden;
                         background-image: linear-gradient(180deg,#fff,#fff);
                         box-shadow: 0 3px 4px 0 rgb(0 0 0 / 5%);
-                        font-size: 15px;
-                        transition: all .2s;
-                    }
+                      }
+                      .searchBox.input .inputBox{
+                        width: 310px;
+                        border-radius:50px;
+                        background: #fff;
+                        transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+                      }
+                      .searchBox .inputBox input {
+                        width: 100%;
+                        height: 30px;
+                        top: 0px;
+                        left: 0px;
+                        padding:0px 70px 0 20px;
+                        background: transparent;
+                        position: absolute;
+                        transform:translate(0,60px);
+                        box-sizing: border-box;
+                        opacity: 0;
+                        line-height: 20px;
+                        border:none;
+                        outline:none;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 20px;
+                      }
+                      .searchBox.input .inputBox input {
+                          opacity: 1;
+                          transform: translate(0, 10px);
+                      }
+                      .searchBox .inputBox input::-webkit-input-placeholder{
+                        color: #1888f5;
+                      }
+                      .searchBox .inputBox button{
+                        height: 50px;
+                        width: 50px;
+                        position: relative;
+                        cursor:pointer;
+                        float: right;
+                        cursor:pointer;
+                        background: #fff;
+                        border:none;
+                        outline: none;
+                        border-radius: 6px;
+                        z-index: 2;
+                        transition: all 0.3s ease-in-out;
+                        padding: 0px; 
+                        // &:hover {
+                        //     background: #1888f5;
+                        // }
+                      }
+                      .searchBox.input .inputBox button{
+                        width:30px;
+                        height:30px;
+                        margin: 10px;
+                        border-radius: 30px;
+                        border-style: none;
+                      }
+                      .searchBox .inputBox button span{
+                        position:relative;
+                        width:22px;
+                        height:22px;
+                        display:inline-block;
+                        vertical-align: middle;
+                        transform: rotate(45deg);
+                        transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+                      }
+                      .searchBox .inputBox button span:before{
+                        content: '';
+                        position:absolute;
+                        width: 2px;
+                        height: 9px;
+                        border-radius: 2px;
+                        background: #1888f5;
+                        top:12px;
+                        left: 9px;
+                        &:hover {
+                            background: #fff;
+                        }
+                      }
+                      .searchBox .inputBox button span:after{
+                        position:absolute;
+                        content: '';
+                        border:2px solid #1888f5;
+                        height: 14px;
+                        width:14px;
+                        border-radius:16px;
+                        left: 2px;
+                        top: 0px;
+                      }
+                      .searchBox.input .inputBox button span{
+                        transform: rotate(-45deg);  
+                      }
+                      .searchBox .closeBtn{
+                        height:25px;
+                        width:25px;
+                        position: absolute;
+                        border-radius: 8px;
+                        z-index: 1;
+                        top:16px;
+                        right: 1px;
+                        transform: rotate(-180deg);
+                        cursor: pointer;
+                        transition-delay: 0.3s;
+                        transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
+                      }
+                      .searchBox .closeBtn:before, .searchBox .closeBtn:after{
+                        content: '';
+                        position: absolute;
+                        background-color: #1888f5; 
+                      }
+                      .searchBox .closeBtn:before{
+                        width: 2px;
+                        height: 20px;
+                        left: 9px;
+                        top: 0px;
+                      }
+                      .searchBox .closeBtn:after{
+                        width: 20px;
+                        height: 2px;
+                        left: 0px;
+                        top: 9px;
+                      }
+                      .searchBox.input .closeBtn{
+                        right: 50px;
+                        transform: rotate(45deg);
+                         transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+                        transition-delay: 0.3s;
+                      }
+                      
+
+
+                   
                 }
             }
         }

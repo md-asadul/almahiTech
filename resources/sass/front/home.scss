@@ -1,14 +1,6 @@
 @import "./variables.scss";
 @import "./mixins.scss";
-.home-container {                
-    // @keyframes pulse{
-    //     0%{
-    //     transform:scaleX(1)}
-    //     50%{transform:scale3d(1.05,1.05,1.05)}
-    //     to{transform:scaleX(1)}
-    // }
-    // .pulse{animation-name:pulse}
-
+.home-container { 
     @keyframes pulse {
         0% {
             box-shadow: 0 0 0 0 #294cff;
@@ -17,7 +9,6 @@
             box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
         }
     }
-
     .hero-section {
         position: relative;
         background: url(/images/front/homepage-background.svg) no-repeat center center / cover;

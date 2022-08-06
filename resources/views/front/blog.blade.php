@@ -29,13 +29,13 @@
                 </div>
                 <div class="blog-content-search">
                     <div class="search_container">
-                        <form action="#" class="search search-active">
-                            <input type="search" placeholder="Search...">
-                            <div class="go-btn search-active-go-btn">
-                                <i class="fas fa-long-arrow-right"></i>
+                        <div class="searchBox">
+                            <div class="inputBox">
+                                <input type="searchInput" placeholder ="Secrch..."/>
+                                <button onClick="addSearch(this,event)"><span></span></button>
                             </div>
-                        </form>
-                        <div class="search-btn search-close"><i class="fas fa-times"></i></div>
+                            <span class="closeBtn" onClick="addSearch(this,event)"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -169,3 +169,18 @@
     </section>
 </main>
 @endsection
+
+@push('custom-scripts')
+<script>
+    function addSearch(obj,evt){
+    var container  = $(obj).closest('.searchBox');
+    if(!container.hasClass("input")){
+    container.addClass("input");
+    evt.preventDefault();
+    }
+    else if(container.hasClass('input') && $(obj).closest('.inputBox').length == 0){
+        container.removeClass("input");
+    }
+    }
+</script>
+@endpush

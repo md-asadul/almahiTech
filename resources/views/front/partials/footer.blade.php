@@ -90,16 +90,16 @@
 									<a href="#">Support Area</a>
 								</li>
 								<li>
-									<a href="#">Support Policy</a>
+									<a href="{{ route('faq') }}">FAQ</a>
 								</li>
 								<li>
-									<a href="#">Refund Policy</a>
+									<a href="{{ route('refund-policy') }}">Refund Policy</a>
 								</li>
 								<li>
-									<a href="#">Terms of Service</a>
+									<a href="{{ route('terms') }}">Terms of Service</a>
 								</li>
 								<li>
-									<a href="#">Privacy Policy</a>
+									<a href="{{ route('privacy-policy') }}">Privacy Policy</a>
 								</li>
 								<li>
 									<a href="#">Brand Assets</a>
@@ -215,7 +215,5 @@
 					</div>
 				</div>
 			</div>
-			
-			
 		</div>
 	</div>
